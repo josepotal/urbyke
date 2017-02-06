@@ -3,6 +3,12 @@
   border-color: #403f3f;
   border-radius: 0;
   margin-bottom: 0; }
+  .navbar .navbar-brand {
+    color: #ffe69c; }
+    .navbar .navbar-brand span:first-child {
+      color: #9ce7ff; }
+    .navbar .navbar-brand span:last-child {
+      color: #a1ff9c; }
 
 main {
   margin-top: 51px; }
