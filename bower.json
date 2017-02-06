@@ -1,0 +1,22 @@
+{
+  "name": "urbyke",
+  "homepage": "https://github.com/FransLopez/urbyke",
+  "authors": [
+    "FransLopez <frans.lopez.m@gmail.com>",
+    "Josepotal <j.otal.pares@gmail.com>",
+    "ERPG <erpg12@yahoo.es>"
+  ],
+  "description": "Application to locate any public bike sharing around the world",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
