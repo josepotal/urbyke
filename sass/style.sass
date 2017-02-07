@@ -12,6 +12,9 @@ body
   margin-bottom: 0
   height: 56px
   line-height: 40px
+  .navbar-collapse
+    background: #403f3f
+    border-color: #403f3f  
   .navbar-brand
     line-height: 50px
     padding-top: 0
@@ -30,32 +33,24 @@ body
     span:last-child
       color: #ffe69c
 #form-search
-  position: absolute
-  top: 62px
-  left: 130px
-  z-index: 1000
-  background: rgba(114, 117, 224, 0.6)
-  padding: 10px 30px
-  box-shadow: 0 0 5px 1px rgba(0,0,0,0.4)
   button
     padding: 5px 12px
     border-radius: 0
-    background: #403f3f
-    color: white
-    border: none
+    background: white
+    color: #403f3f
+    border: 1px solid white
     &:hover
-      color: #403f3f
-      background: white
+      color: white
+      background: $color-background
     span
       font-size: 20px
   input
-    border: 1px solid #403f3f
+    border: 1px solid white
     border-radius: 0
-    margin-left: -3px
-    height: 36px
-    width: 140px
+    height: 34px
+    min-width: 300px
     &:focus
-      min-width: 300px
+      border: 1px solid rgba(114, 117, 224, 0.5)
 main
   height: calc(100% - 5px)
   margin-top: 51px
