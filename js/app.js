@@ -1,2 +1,2 @@
 /* eslint no-undef: "off" */
-angular.module('urbykeApp', ['ngRoute'])
+angular.module('urbykeApp', ['ngRoute', 'ngMap'])
