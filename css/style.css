@@ -55,9 +55,9 @@ body {
 main {
   height: calc(100% - 5px);
   margin-top: 51px; }
-  main #map {
+  main #display-map {
     height: 100%; }
-    main #map #display-map {
+    main #display-map #map {
       height: 100%; }
   main #info-station {
     z-index: 200;
