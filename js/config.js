@@ -4,7 +4,8 @@ angular.module('urbykeApp')
   $routeProvider
     .when('/', {
       templateUrl: 'js/templates/main.html',
-      controller: 'LocationController'
+      controller: 'LocationController',
+      controllerAs: 'vm'
     })
     .otherwise('/')
 })
