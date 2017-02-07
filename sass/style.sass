@@ -1,20 +1,39 @@
+html, body
+  height: 100%
+  font-family: 'Roboto', sans-serif
+body
+  height: calc(100% - 51px)
 .navbar
   background: #403f3f
   border-color: #403f3f
   border-radius: 0
   margin-bottom: 0
   .navbar-brand
+    font-size: 35px
+    letter-spacing: 0.5px
     color: #ffe69c
     span:first-child
       color: #9ce7ff
     span:last-child
       color: #a1ff9c
+  .navbar-brand:hover
+    color: #9ce7ff
+    span:first-child
+      color: #a1ff9c
+    span:last-child
+      color: #ffe69c
 main
+  height: calc(100% - 64px)
   margin-top: 51px
+  #container-map
+    height: 100%
+    #display-map
+      height: 100%
 footer
   background: #7275e0
   color: #f3f3f3
   line-height: 64px
   p
     margin: 0
+    font-size: 12px
 
