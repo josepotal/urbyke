@@ -5,40 +5,71 @@ html, body {
 body {
   height: calc(100% - 51px); }
 
-.navbar {
+#navbar {
   background: #403f3f;
   border-color: #403f3f;
   border-radius: 0;
-  margin-bottom: 0; }
-  .navbar .navbar-brand {
+  margin-bottom: 0;
+  height: 56px;
+  line-height: 40px; }
+  #navbar .navbar-brand {
+    line-height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
     font-size: 35px;
     letter-spacing: 0.5px;
     color: #ffe69c; }
-    .navbar .navbar-brand span:first-child {
+    #navbar .navbar-brand span:first-child {
       color: #9ce7ff; }
-    .navbar .navbar-brand span:last-child {
+    #navbar .navbar-brand span:last-child {
       color: #a1ff9c; }
-  .navbar .navbar-brand:hover {
+  #navbar .navbar-brand:hover {
     color: #9ce7ff; }
-    .navbar .navbar-brand:hover span:first-child {
+    #navbar .navbar-brand:hover span:first-child {
       color: #a1ff9c; }
-    .navbar .navbar-brand:hover span:last-child {
+    #navbar .navbar-brand:hover span:last-child {
       color: #ffe69c; }
 
+#form-search {
+  position: absolute;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(114, 117, 224, 0.6);
+  padding: 10px 50px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4); }
+  #form-search button {
+    padding: 5px 12px;
+    border-radius: 0;
+    background: #403f3f;
+    color: white;
+    border: none; }
+    #form-search button:hover {
+      color: #403f3f;
+      background: white; }
+    #form-search button span {
+      font-size: 20px; }
+  #form-search input {
+    border: 1px solid #403f3f;
+    border-radius: 0;
+    margin-right: -3px;
+    height: 36px;
+    width: 140px; }
+    #form-search input:focus {
+      min-width: 300px; }
+
 main {
-  height: calc(100% - 64px);
+  height: calc(100% - 5px);
   margin-top: 51px; }
-  main #container-map {
+  main #map {
     height: 100%; }
-    main #container-map #display-map {
+    main #map #display-map {
       height: 100%; }
 
 footer {
   background: #7275e0;
   color: #f3f3f3;
-  line-height: 64px; }
-  footer p {
-    margin: 0;
-    font-size: 12px; }
+  height: 5px; }
 
 /*# sourceMappingURL=style.css.map */

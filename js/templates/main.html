@@ -1,5 +1,7 @@
-<div id="container-map" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{vm.googleMapsUrl}}">
-  <ng-map id="display-map" center="current-location" zoom="16" default-style="false" >
-    <marker position="current-location""></marker>
-  </ng-map>
-</div>
+<section id="map" map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{vm.googleMapsUrl}}">
+    <ng-map id="display-map" center="current-location" zoom="16" default-style="false">
+        <marker position="current-location"></marker>
+    </ng-map>
+</section>
+<section id="info-station">
+</section>
