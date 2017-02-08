@@ -5,6 +5,12 @@
     <nav class="container-fluid hidden-info {{vm.showInfo}}">
         <div>
             <div>
+                <!--https://ngmap.github.io/#/!map-initialized.html-->
+                $scope.map.center: {{map.getCenter().lat()}}<br/>
+                $scope.map.center: {{mymap.getCenter().lat()}}<br/>
+                $scope.map.center: {{mymap.getCenter().lng()}}
+            </div>
+            <div>
                 <p>{{vm.allStationsInfo.length}} stations found</p>
             </div>
             <ul class="list-unstyled">
@@ -22,7 +28,7 @@
 </section>
 
 <section id="display-map">
-    <ng-map id="map" default-style="false" center="current-location" zoom="16">
+    <ng-map id="map" default-style="false" center="current-position" zoom="16">
         <div ng-repeat="station in vm.allStationsInfo">
             <marker id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('bar{{station.id}}')">
             </marker>

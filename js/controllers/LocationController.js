@@ -1,16 +1,20 @@
 /* eslint no-undef: "off" */
 (function () {
   angular.module('urbykeApp')
-.controller('LocationController', function (BikeFactory, NgMap) {
+.controller('LocationController', function ($rootScope, BikeFactory, NgMap) {
   var vm = this
 
+  // var bcn = new google.maps.LatLng(41.3850639, 2.1734035)
   // NgMap.getMap().then(function (map) {
-  //   this.map = map
-
-  //   console.log(map.getCenter())
-  //   console.log('markers', map.markers)
-  //   console.log('shapes', map.shapes)
+  //   vm.map = map
   // })
+  // vm.map.setCenter(bcn)
+
+  $rootScope.$on('mapInitialized', function (evt, map) {
+    $rootScope.mymap = map
+    $rootScope.$apply()
+  })
+
   BikeFactory.getBikeStations()
     .then(function (response) {
       vm.allStationsInfo = response
