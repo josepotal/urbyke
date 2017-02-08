@@ -7,16 +7,18 @@ angular.module('urbykeApp')
   var url = 'http://api.citybik.es/v2/networks/bicing'  
   return $http.get(url)
   .then(function(response){
-    vm.stations = response.data.network.stations[0]
+    vm.stations = response.data.network.stations
     console.log(vm.stations)
-    vm.stationsInfo = {
-      id: vm.stations.id,
-      name: vm.stations.name,
-      bikes: vm.stations.free_bikes,
-      slots: vm.stations.empty_slots, 
-      latitude: vm.stations.latitude,
-      longitude: vm.stations.longitude
-    }
+    vm.stationsInfo = vm.stations.map(function(elem) {
+      return {
+      id: elem.id,
+      name: elem.name,
+      bikes: elem.free_bikes,
+      slots: elem.empty_slots, 
+      latitude: elem.latitude,
+      longitude: elem.longitude
+      }
+    })
     console.log(vm.stationsInfo)
     return vm.stationsInfo
   })

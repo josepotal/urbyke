@@ -5,6 +5,7 @@ angular.module('urbykeApp')
 
   NgMap.getMap().then(function(map) {
     var map = map;
+    
     console.log(map.getCenter());
     console.log('markers', map.markers);
     console.log('shapes', map.shapes);
@@ -13,8 +14,9 @@ angular.module('urbykeApp')
   
  BikeFactory.getBikeStations()
  .then(function(response) {
-  vm.info = response
-  console.log(vm.info)
+  vm.allStationsInfo = response
+  console.log(vm.allStationsInfo)
+
   
  })
   // .then(function(response){

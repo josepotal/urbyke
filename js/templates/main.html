@@ -1,14 +1,14 @@
 <section id="display-map">
     <ng-map id="map" default-style="true" center="current-location" zoom="14">
-    <div>
-        <marker id="marker1" position="{{vm.info.latitude}}, {{vm.info.longitude}}"  on-click="map.showInfoWindow('bar1')" >
+    <div ng-repeat="station in vm.allStationsInfo">
+        <marker id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}"  on-click="map.showInfoWindow('bar{{station.id}}')" >
         </marker>
-        <info-window id="bar1">
-            <div ng-non-bindable>
-                <strong>{{vm.info.name}}</strong>
+        <info-window id="bar{{station.id}}">
+            <div>
+                <strong>{{station.name}}</strong>
                 <br>
-                Bikes available: <strong>{{vm.info.bikes}}</strong> <br>
-                Slots: <strong>{{vm.info.slots}}</strong>
+                Bikes available: <strong>{{station.bikes}}</strong> <br>
+                Slots: <strong>{{station.slots}}</strong>
             </div>
         </info-window>
     </div>
