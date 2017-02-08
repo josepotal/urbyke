@@ -35,6 +35,8 @@ main {
     width: 40%;
     height: 100%;
     background: #FbFbFb; }
+    main #details-list #more-info {
+      display: none; }
     main #details-list nav {
       padding: 40px 30px 50px 60px; }
 
@@ -58,13 +60,31 @@ main {
     main #display-map {
       left: 0%;
       width: 100%;
+      height: calc(100% - 115px);
       border: none; }
     main #details-list {
-      width: 90%;
+      width: 100%;
       height: auto;
       position: absolute;
-      left: 5%;
-      z-index: 300;
-      top: 90%; } }
+      z-index: 300; }
+      main #details-list #more-info {
+        display: block;
+        position: fixed;
+        width: 100%;
+        background: #0084FF;
+        height: 51px;
+        border-top: 2px solid rgba(64, 63, 63, 0.4);
+        padding: 5px 20px;
+        color: white; }
+    main .bottom-50 {
+      top: calc(100% - 51px); }
+    main .aumen {
+      top: 0; }
+    main nav {
+      margin-top: 51px; }
+    main nav.hidden-info {
+      display: none; }
+    main nav.most {
+      display: block; } }
 
 /*# sourceMappingURL=style.css.map */
