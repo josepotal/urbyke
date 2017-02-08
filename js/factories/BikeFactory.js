@@ -34,12 +34,15 @@ angular.module('urbykeApp')
 
 
     function getStationDetails( idStation ) {
+        console.log('hola')
         return getBikeStations()
-        console.log(getBikeStations)
             .then(function(stations) {
+                console.log(stations)
                 return stations.filter( function(station){
+                    console.log(station)
                     return station.id === idStation;
                 })
+
             })
     }
 
