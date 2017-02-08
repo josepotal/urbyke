@@ -7,5 +7,12 @@ angular.module('urbykeApp')
       controller: 'LocationController',
       controllerAs: 'vm'
     })
+
+    .when('/details/:idStation', {
+      templateUrl: 'js/templates/details.html',
+      controller: 'DetailsController',
+      controllerAs: 'vm'
+     })
+
     .otherwise('/')
 })
