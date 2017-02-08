@@ -1,33 +1,38 @@
-<!-- <section id="display-map">
-    <ng-map id="map" default-style="false" center="current-location" zoom="14">
+<section id="details-list" class="bottom-50 {{vm.showDetails}}">
+    <div id="more-info">
+        <button ng-click="vm.moreStations()">More Stations</button>
+    </div>
+    <nav class="container-fluid hidden-info {{vm.showInfo}}">
+        <div>
+            <div>
+                <p>{{vm.allStationsInfo.length}} stations found</p>
+            </div>
+            <ul class="list-unstyled">
+                <li ng-repeat="station in vm.allStationsInfo">
+                    <h3><a href="#!/details/{{$index}}">{{station.name}}</a></h3>
+                    <div>
+                        <p>Bikes Available: {{station.bikes}}</p>
+                        <p>Empty Slots: {{station.slots}}</p>
+                        <button class="glyphicon glyphicon-map-marker" ng-click=""></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+<section id="display-map">
+    <ng-map id="map" default-style="false" center="current-location" zoom="16">
         <div ng-repeat="station in vm.allStationsInfo">
             <marker id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('bar{{station.id}}')">
             </marker>
             <info-window id="bar{{station.id}}">
-                <div>
+                <div class="">
                     <strong>{{station.name}}</strong>
                     <br> Bikes available: <strong>{{station.bikes}}</strong>
                     <br> Slots: <strong>{{station.slots}}</strong>
                 </div>
             </info-window>
         </div>
-</section> -->
-<section class="container">
-    <div class="row">
-        <p>{{vm.allStationsInfo.length}} stations found</p>
-    </div>
-    <ul class="list-unstyled">
-        <li ng-repeat="station in vm.allStationsInfo">
-            <h3><a href="#!/details/{{$index}}">{{station.name}}</a></h3>
-            <div>
-                <p>Bikes Available: {{station.bikes}}</p>
-                <p>Empty Slots: {{station.slots}}</p>
-                <button class="glyphicon glyphicon-map-marker" ng-click=""></button>
-            </div>
-        </li>
-    </ul>
+    </ng-map>
 </section>
-<!-- 
-<section id="info-station">
-    <p>Hello World!!</p>
-</section> -->

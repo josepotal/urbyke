@@ -1,23 +1,37 @@
 /* eslint no-undef: "off" */
-angular.module('urbykeApp')
-.controller('LocationController', LocationController)
-
- function LocationController (BikeFactory, NgMap) {
+(function () {
+  angular.module('urbykeApp')
+.controller('LocationController', function (BikeFactory, NgMap) {
   var vm = this
 
-  NgMap.getMap().then(function (map) {
-    var map = map
+  // NgMap.getMap().then(function (map) {
+  //   this.map = map
 
-    console.log(map.getCenter())
-    console.log('markers', map.markers)
-    console.log('shapes', map.shapes)
-  })
-
+  //   console.log(map.getCenter())
+  //   console.log('markers', map.markers)
+  //   console.log('shapes', map.shapes)
+  // })
   BikeFactory.getBikeStations()
- .then(function (response) {
-   vm.allStationsInfo = response
-   console.log(vm.allStationsInfo)
- })
+    .then(function (response) {
+      vm.allStationsInfo = response
+    })
 
- //add function on map. https://ngmap.github.io/#/!event-simple.html
-}
+  // Show details w/ device width is < 650
+  vm.showDetails = ''
+  vm.showInfo = ''
+  vm.moreStations = function () {
+    vm.showDetails = (vm.showDetails === 'top-reset') ? '' : 'top-reset'
+    vm.showInfo = (vm.showInfo === 'show-info') ? '' : 'show-info'
+  }
+})
+.controller('SearchLocationController', function ($rootScope, SearchFactory, BikeFactory, NgMap) {
+  console.log('SearchLocationController...')
+  searchFactory.searchStation()
+        .then(function (response) {
+          vm.stationSearch = response
+          console.log(vm.stationSearch)
+          $rootScope.bikes = response
+        })
+})
+})()
+

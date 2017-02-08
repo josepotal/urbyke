@@ -1,72 +1,111 @@
-$color-background: #7275e0
-
+$background_main: #FbFbFb
 html, body
   height: 100%
   font-family: 'Roboto', sans-serif
 body
-  height: calc(100% - 51px)
-#navbar
-  background: #403f3f
-  border-color: #403f3f
-  border-radius: 0
-  margin-bottom: 0
-  height: 56px
-  line-height: 40px
-  .navbar-collapse
-    background: #403f3f
-    border-color: #403f3f  
-  .navbar-brand
-    line-height: 50px
-    padding-top: 0
-    padding-bottom: 0
-    font-size: 35px
-    letter-spacing: 0.5px
-    color: #ffe69c
-    span:first-child
-      color: #9ce7ff
-    span:last-child
-      color: #a1ff9c
-  .navbar-brand:hover
-    color: #9ce7ff
-    span:first-child
-      color: #a1ff9c
-    span:last-child
-      color: #ffe69c
-#form-search
-  button
-    padding: 5px 12px
-    border-radius: 0
-    background: white
-    color: #403f3f
-    border: 1px solid white
-    &:hover
-      color: white
-      background: $color-background
-    span
-      font-size: 20px
-  input
-    border: 1px solid white
-    border-radius: 0
-    height: 34px
-    min-width: 300px
-    &:focus
-      border: 1px solid rgba(114, 117, 224, 0.5)
+  padding-top: 64px
+  background: $background_main
+#header-main
+  height: 64px
+  background: $background_main
+  box-shadow: 0 0 5px 1px rgba(64, 63, 63, 0.4)
+  .container
+    padding-top: 5px
+    padding-bottom: 4px
+    div
+      max-height: 55px
+      max-width: 245px
 main
-  height: calc(100% - 5px)
-  margin-top: 51px
+  position: relative
+  height: 100%
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
   #display-map
-    height: 100%
+    position: fixed
+    left: 40%
+    width: 60%
+    height: calc(100% - 64px)
+    border-left: 2px solid rgba(64, 63, 63, 0.4)
     #map
       height: 100%
-  #info-station
-    z-index: 200
-    position: absolute
-    bottom: 7px
-    left: 20px
-    height: 50px
-    min-width: 200px
-    background: rgba(114, 117, 224, 0.5)
-footer
-  background: $color-background
-  height: 5px
+  #details-list
+    width: 40%
+    height: 100%
+    background: $background_main
+    #more-info
+      display: none
+    nav
+      padding: 40px 30px 50px 60px
+
+@media all and (min-width: 1400px )
+  main
+    #display-map
+      left: 35%
+      width: 65%
+    #details-list
+      width: 35%
+
+@media all and (max-width: 1000px )
+  main  
+    #details-list
+      nav
+        padding-left: 30px
+
+@media all and (max-width: 800px )
+  main  
+    #details-list
+      nav
+        padding-left: 15px
+        padding-bottom: 15px
+
+@media all and (max-width: 650px )
+  main
+    flex-direction: column
+    flex-wrap: wrap
+    #display-map
+      left: 0%
+      width: 100%
+      height: calc(100% - 115px)
+      border: none
+    #details-list
+      width: 100%
+      height: auto
+      position: absolute
+      z-index: 300
+      #more-info
+        display: block
+        position: fixed
+        width: 100%
+        background: #0084FF
+        height: 51px
+        border-top: 2px solid rgba(64, 63, 63, 0.4)
+        padding: 5px 20px
+        color: white
+        text-align: center
+        button
+          width: 90%
+          background: $background_main
+          border: 2px solid $background_main
+          color: black
+          padding: 6px 15px
+          font-weight: 600
+          cursor: pointer
+          &:hover
+            background: #0084FF
+            color: white
+    .bottom-50
+      top: calc(100% - 51px)
+    .top-reset
+      top: 0
+    nav
+      margin-top: 51px
+    nav.hidden-info
+      display: none
+    nav.show-info
+      display: block
+
+
+      
+      
 

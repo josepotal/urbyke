@@ -3,73 +3,100 @@ html, body {
   font-family: "Roboto", sans-serif; }
 
 body {
-  height: calc(100% - 51px); }
+  padding-top: 64px;
+  background: #FbFbFb; }
 
-#navbar {
-  background: #403f3f;
-  border-color: #403f3f;
-  border-radius: 0;
-  margin-bottom: 0;
-  height: 56px;
-  line-height: 40px; }
-  #navbar .navbar-collapse {
-    background: #403f3f;
-    border-color: #403f3f; }
-  #navbar .navbar-brand {
-    line-height: 50px;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 35px;
-    letter-spacing: 0.5px;
-    color: #ffe69c; }
-    #navbar .navbar-brand span:first-child {
-      color: #9ce7ff; }
-    #navbar .navbar-brand span:last-child {
-      color: #a1ff9c; }
-  #navbar .navbar-brand:hover {
-    color: #9ce7ff; }
-    #navbar .navbar-brand:hover span:first-child {
-      color: #a1ff9c; }
-    #navbar .navbar-brand:hover span:last-child {
-      color: #ffe69c; }
-
-#form-search button {
-  padding: 5px 12px;
-  border-radius: 0;
-  background: white;
-  color: #403f3f;
-  border: 1px solid white; }
-  #form-search button:hover {
-    color: white;
-    background: #7275e0; }
-  #form-search button span {
-    font-size: 20px; }
-#form-search input {
-  border: 1px solid white;
-  border-radius: 0;
-  height: 34px;
-  min-width: 300px; }
-  #form-search input:focus {
-    border: 1px solid rgba(114, 117, 224, 0.5); }
+#header-main {
+  height: 64px;
+  background: #FbFbFb;
+  box-shadow: 0 0 5px 1px rgba(64, 63, 63, 0.4); }
+  #header-main .container {
+    padding-top: 5px;
+    padding-bottom: 4px; }
+    #header-main .container div {
+      max-height: 55px;
+      max-width: 245px; }
 
 main {
-  height: calc(100% - 5px);
-  margin-top: 51px; }
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
   main #display-map {
-    height: 100%; }
+    position: fixed;
+    left: 40%;
+    width: 60%;
+    height: calc(100% - 64px);
+    border-left: 2px solid rgba(64, 63, 63, 0.4); }
     main #display-map #map {
       height: 100%; }
-  main #info-station {
-    z-index: 200;
-    position: absolute;
-    bottom: 7px;
-    left: 20px;
-    height: 50px;
-    min-width: 200px;
-    background: rgba(114, 117, 224, 0.5); }
+  main #details-list {
+    width: 40%;
+    height: 100%;
+    background: #FbFbFb; }
+    main #details-list #more-info {
+      display: none; }
+    main #details-list nav {
+      padding: 40px 30px 50px 60px; }
 
-footer {
-  background: #7275e0;
-  height: 5px; }
+@media all and (min-width: 1400px) {
+  main #display-map {
+    left: 35%;
+    width: 65%; }
+  main #details-list {
+    width: 35%; } }
+@media all and (max-width: 1000px) {
+  main #details-list nav {
+    padding-left: 30px; } }
+@media all and (max-width: 800px) {
+  main #details-list nav {
+    padding-left: 15px;
+    padding-bottom: 15px; } }
+@media all and (max-width: 650px) {
+  main {
+    flex-direction: column;
+    flex-wrap: wrap; }
+    main #display-map {
+      left: 0%;
+      width: 100%;
+      height: calc(100% - 115px);
+      border: none; }
+    main #details-list {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: 300; }
+      main #details-list #more-info {
+        display: block;
+        position: fixed;
+        width: 100%;
+        background: #0084FF;
+        height: 51px;
+        border-top: 2px solid rgba(64, 63, 63, 0.4);
+        padding: 5px 20px;
+        color: white;
+        text-align: center; }
+        main #details-list #more-info button {
+          width: 90%;
+          background: #FbFbFb;
+          border: 2px solid #FbFbFb;
+          color: black;
+          padding: 6px 15px;
+          font-weight: 600;
+          cursor: pointer; }
+          main #details-list #more-info button:hover {
+            background: #0084FF;
+            color: white; }
+    main .bottom-50 {
+      top: calc(100% - 51px); }
+    main .top-reset {
+      top: 0; }
+    main nav {
+      margin-top: 51px; }
+    main nav.hidden-info {
+      display: none; }
+    main nav.show-info {
+      display: block; } }
 
 /*# sourceMappingURL=style.css.map */
