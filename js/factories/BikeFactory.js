@@ -8,7 +8,7 @@ angular.module('urbykeApp')
     return $http.get(url)
   .then(function (response) {
     vm.stations = response.data.network.stations
-    console.log(vm.stations)
+    // console.log(vm.stations)
     vm.stationsInfo = vm.stations.map(function (elem) {
       return {
         id: elem.id,
@@ -19,7 +19,8 @@ angular.module('urbykeApp')
         longitude: elem.longitude
       }
     })
-    console.log(vm.stationsInfo)
+    // console.log(vm.stationsInfo)
+    console.log("step-2")
     return vm.stationsInfo
   })
   }
@@ -28,4 +29,31 @@ angular.module('urbykeApp')
     getBikeStations: getBikeStations
   }
   
+})
+
+
+.factory('SearchFactory', function($http){
+
+  var vm = this
+  console.log("SearchFactory in construction...")
+  function searchStation() {
+    var url = 'http://api.citybik.es/v2/networks/bicing'
+    return $http.get(url)
+    .then(function(response) {
+      console.log(response)
+      vm.stationName = response.map(function(elem) {
+        return {
+          name: elem.name,
+          id : elem.id
+        } 
+
+      })
+      console.log(vm.stationName)
+      return vm.stationName
+    })
+  }
+
+  return {
+    searchStation: searchStation
+  }
 })

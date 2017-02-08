@@ -1,23 +1,41 @@
 /* eslint no-undef: "off" */
 angular.module('urbykeApp')
 
-.controller('LocationController', function (BikeFactory, NgMap) {
-  var vm = this
+.controller('LocationController', function($rootScope, SearchFactory, BikeFactory, NgMap) {
+    var vm = this
 
-  NgMap.getMap().then(function (map) {
-    var map = map
+    console.log("step-1")
 
-    console.log(map.getCenter())
-    console.log('markers', map.markers)
-    console.log('shapes', map.shapes)
-  })
+    // NgMap.getMap()
+    //   .then(function(map) {
+    //       var map = map
 
-  BikeFactory.getBikeStations()
- .then(function (response) {
-   vm.allStationsInfo = response
-   console.log(vm.allStationsInfo)
- })
+    //       console.log(map.getCenter())
+    //       console.log('markers', map.markers)
+    //       console.log('shapes', map.shapes)
+    //   })
 
- 
+    BikeFactory.getBikeStations()
+        .then(function(response) {
+          console.log("step-3")
+            vm.allStationsInfo = response
+                // console.log(vm.allStationsInfo)
+        })
+
+
+})
+
+.controller('SearchLocationController', function($rootScope, SearchFactory, BikeFactory, NgMap) {
+
+    console.log('SearchLocationController...')
+    searchFactory.searchStation()
+        .then(function(response) {
+            vm.stationSearch = response
+            console.log(vm.stationSearch)
+            $rootScope.bikes = response;
+        })
+
+
+
 })
 

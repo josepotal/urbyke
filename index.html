@@ -29,10 +29,10 @@
                     <a class="navbar-brand" href="#!/"><span>Ur</span><span>by</span><span>ke</span></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="SearchLocationController">
                     <form id="form-search" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search Station...">
+                            <input ng-model="search" type="text" class="form-control" placeholder="Search Station...">
                             <button type="submit" class="form-control btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </div>
                     </form>
@@ -50,8 +50,9 @@
     <script src="js/config.js"></script>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD00quOa-WmLbUtxk5Rz8R9jPfzSTEwXPA" async defer></script>
+    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+    
 </body>
 
 </html>
