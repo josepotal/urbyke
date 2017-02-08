@@ -2,7 +2,6 @@
 angular.module('urbykeApp')
 
 .factory('BikeFactory', function($http) {
-    var vm = this
 
     function getBikeStations() {
         var url = 'http://api.citybik.es/v2/networks/bicing'
@@ -28,13 +27,24 @@ angular.module('urbykeApp')
 
         }
 
-
         return $http.get(url)
             .then(getResults)
             .then(getStations) 
     }
 
+
+    function getStationDetails( idStation ) {
+        return getBikeStations()
+        console.log(getBikeStations)
+            .then(function(stations) {
+                return stations.filter( function(station){
+                    return station.id === idStation;
+                })
+            })
+    }
+
     return {
-        getBikeStations: getBikeStations
+        getBikeStations: getBikeStations,
+        getStationDetails: getStationDetails
     }
 })
