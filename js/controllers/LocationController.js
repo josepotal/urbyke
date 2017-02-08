@@ -1,25 +1,28 @@
 /* eslint no-undef: "off" */
 angular.module('urbykeApp')
-<<<<<<< HEAD
-// .controller('LocationController', function (BikeFactory, apikey, NgMap) {
-// 	var vm = this 
-// 	vm.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=' + apikey
 
-// 	BikeFactory.urbykeCall()
-// 	.then(function(response) {
-// 		vm.latitude = response.data.network.location.latitude
-// 		vm.longitude = response.data.network.location.longitude
-// 		vm.stations = response.data.network.stations
-// 		console.log(vm.stations[0])
-// 	})
-
-
-
-
-
-})
-=======
 .controller('LocationController', function (BikeFactory, NgMap) {
-  var vm = this
+  var vm = this;
+
+  NgMap.getMap().then(function(map) {
+    var map = map;
+    
+    console.log(map.getCenter());
+    console.log('markers', map.markers);
+    console.log('shapes', map.shapes);
+  });
+
+  
+ BikeFactory.getBikeStations()
+ .then(function(response) {
+  vm.allStationsInfo = response
+  console.log(vm.allStationsInfo)
+
+  
+ })
+ 
 })
->>>>>>> 9988fe880ee1f9cf99fad5936ff6c332022fd3c3
+
+ 
+
+
