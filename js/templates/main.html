@@ -1,5 +1,5 @@
 <section id="display-map">
-    <ng-map id="map" default-style="true" center="current-location" zoom="14">
+    <ng-map id="map" default-style="false" center="current-location" zoom="14">
     <div ng-repeat="station in vm.allStationsInfo">
         <marker id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}"  on-click="map.showInfoWindow('bar{{station.id}}')" >
         </marker>

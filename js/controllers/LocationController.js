@@ -19,12 +19,5 @@ angular.module('urbykeApp')
 
   
  })
-  // .then(function(response){
-  //   vm.stations = response.data.network.stations
-  //   console.log(vm.stations)
-  // })
-
-  vm.info1 = {id:"111", address:"Plaça Catalunya", slots: 8, bikes:13}
-  vm.station2 = 'Station2'
-
+ 
 });
