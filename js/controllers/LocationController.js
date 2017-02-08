@@ -24,4 +24,13 @@
     vm.showInfo = (vm.showInfo === 'show-info') ? '' : 'show-info'
   }
 })
+.controller('SearchLocationController', function ($rootScope, SearchFactory, BikeFactory, NgMap) {
+  console.log('SearchLocationController...')
+  searchFactory.searchStation()
+        .then(function (response) {
+          vm.stationSearch = response
+          console.log(vm.stationSearch)
+          $rootScope.bikes = response
+        })
+})
 })()
