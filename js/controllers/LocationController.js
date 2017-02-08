@@ -1,22 +1,23 @@
 /* eslint no-undef: "off" */
 angular.module('urbykeApp')
-    .controller('LocationController', function(BikeFactory, apikey, NgMap, $rootScope) {
 
-    	var latAndLon
-        var vm = this
-        vm.googleMapsUrl = 'https://maps.googleapis.com/maps/api/js?key=' + apikey
+.controller('LocationController', function (BikeFactory, NgMap) {
+  var vm = this
 
-        BikeFactory.urbykeCall()
-            .then(function(response) {
-                vm.latitude = response.data.network.location.latitude
-                vm.longitude = response.data.network.location.longitude
-                vm.stations = response.data.network.stations
-                $rootScope.latAndLon = vm.stations.map(function(elem) {
-            	return elem.latitude +", "+ elem.longitude
+  NgMap.getMap().then(function (map) {
+    var map = map
 
-            })
-                // console.log($rootScope.latAndLon)
-      
-            })
-            
-    })
+    console.log(map.getCenter())
+    console.log('markers', map.markers)
+    console.log('shapes', map.shapes)
+  })
+
+  BikeFactory.getBikeStations()
+ .then(function (response) {
+   vm.allStationsInfo = response
+   console.log(vm.allStationsInfo)
+ })
+
+ 
+})
+
