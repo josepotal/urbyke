@@ -1,13 +1,13 @@
-$color-background: #7275e0
-
+$background_main: #FbFbFb
 html, body
   height: 100%
   font-family: 'Roboto', sans-serif
 body
   padding-top: 64px
+  background: $background_main
 #header-main
   height: 64px
-  background: #FbFbFb
+  background: $background_main
   box-shadow: 0 0 5px 1px rgba(64, 63, 63, 0.4)
   .container
     padding-top: 5px
@@ -19,14 +19,60 @@ main
   position: relative
   height: 100%
   display: flex
-  flex-direction: row-reverse
+  flex-direction: row
   flex-wrap: nowrap
   #display-map
     position: fixed
+    left: 40%
     width: 60%
     height: calc(100% - 64px)
+    border-left: 2px solid rgba(64, 63, 63, 0.4)
     #map
       height: 100%
   #details-list
     width: 40%
-    height: 1000px
+    height: 100%
+    background: $background_main
+    nav
+      padding: 40px 30px 50px 60px
+
+@media all and (min-width: 1400px )
+  main
+    #display-map
+      left: 35%
+      width: 65%
+    #details-list
+      width: 35%
+
+@media all and (max-width: 1000px )
+  main  
+    #details-list
+      nav
+        padding-left: 30px
+
+@media all and (max-width: 800px )
+  main  
+    #details-list
+      nav
+        padding-left: 15px
+        padding-bottom: 15px
+
+@media all and (max-width: 650px )
+  main
+    flex-direction: column
+    flex-wrap: wrap
+    #display-map
+      left: 0%
+      width: 100%
+      border: none
+    #details-list
+      width: 90%
+      height: auto
+      position: absolute
+      left: 5%
+      z-index: 300
+      top: 90%
+
+      
+      
+
