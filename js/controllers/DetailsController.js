@@ -9,7 +9,4 @@ angular.module('urbykeApp')
     console.log(idStation)
       vm.stationDetails = station
       console.log('josep')
-    })
-}
-
-
+    }
