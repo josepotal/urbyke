@@ -1,6 +1,8 @@
 /* eslint no-undef: "off" */
 angular.module('urbykeApp')
-.controller('LocationController', function (BikeFactory, NgMap) {
+.controller('LocationController', LocationController)
+
+ function LocationController (BikeFactory, NgMap) {
   var vm = this
 
   NgMap.getMap().then(function (map) {
@@ -16,4 +18,6 @@ angular.module('urbykeApp')
    vm.allStationsInfo = response
    console.log(vm.allStationsInfo)
  })
-})
+
+ //add function on map. https://ngmap.github.io/#/!event-simple.html
+}
