@@ -11,17 +11,17 @@
   //   console.log('markers', map.markers)
   //   console.log('shapes', map.shapes)
   // })
-  vm.top = ''
-  vm.mostrar = ''
-  vm.aumentar = function () {
-    vm.top = (vm.top === 'aumen') ? '' : 'aumen'
-    vm.mostrar = (vm.mostrar === 'most') ? '' : 'most'
-    console.log(vm.top)
-  }
-  console.log(vm.top)
   BikeFactory.getBikeStations()
     .then(function (response) {
       vm.allStationsInfo = response
     })
+
+  // Show details w/ device width is < 650
+  vm.showDetails = ''
+  vm.showInfo = ''
+  vm.moreStations = function () {
+    vm.showDetails = (vm.showDetails === 'top-reset') ? '' : 'top-reset'
+    vm.showInfo = (vm.showInfo === 'show-info') ? '' : 'show-info'
+  }
 })
 })()

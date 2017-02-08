@@ -90,13 +90,13 @@ main {
             color: white; }
     main .bottom-50 {
       top: calc(100% - 51px); }
-    main .aumen {
+    main .top-reset {
       top: 0; }
     main nav {
       margin-top: 51px; }
     main nav.hidden-info {
       display: none; }
-    main nav.most {
+    main nav.show-info {
       display: block; } }
 
 /*# sourceMappingURL=style.css.map */
