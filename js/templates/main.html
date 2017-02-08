@@ -18,7 +18,7 @@
     </div>
     <ul class="list-unstyled">
         <li ng-repeat="station in vm.allStationsInfo">
-            <h3><a href="#!/details/{{station.id}}">{{station.name}}</a></h3>
+            <h3><a href="#!/details/{{$index}}">{{station.name}}</a></h3>
             <div>
                 <p>Bikes Available: {{station.bikes}}</p>
                 <p>Empty Slots: {{station.slots}}</p>

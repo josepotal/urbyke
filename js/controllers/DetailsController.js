@@ -7,7 +7,6 @@ angular.module('urbykeApp')
     
     BikeFactory.getStationDetails(idStation)
     console.log(idStation)
-    .then(function(station) {
       vm.stationDetails = station
       console.log('josep')
     })
