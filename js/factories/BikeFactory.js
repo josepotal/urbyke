@@ -1,27 +1,24 @@
 /* eslint no-undef: "off" */
 angular.module('urbykeApp')
-
 .factory('BikeFactory', function ($http) {
-  var vm = this
+  var url = 'http://api.citybik.es/v2/networks/bicing'
+
   function getBikeStations () {
-    var url = 'http://api.citybik.es/v2/networks/bicing'
     return $http.get(url)
-  .then(function (response) {
-    vm.stations = response.data.network.stations
-    console.log(vm.stations)
-    vm.stationsInfo = vm.stations.map(function (elem) {
-      return {
-        id: elem.id,
-        name: elem.name,
-        bikes: elem.free_bikes,
-        slots: elem.empty_slots,
-        latitude: elem.latitude,
-        longitude: elem.longitude
-      }
+    .then(function (response) {
+      var stations = response.data.network.stations
+      var stationsInfo = stations.map(function (elem) {
+        return {
+          id: elem.id,
+          name: elem.name,
+          bikes: elem.free_bikes,
+          slots: elem.empty_slots,
+          latitude: elem.latitude,
+          longitude: elem.longitude
+        }
+      })
+      return stationsInfo
     })
-    console.log(vm.stationsInfo)
-    return vm.stationsInfo
-  })
   }
 
   return {

@@ -15,10 +15,16 @@
 </head>
 
 <body>
-    <header>
-        <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <header id="header-main" class="navbar-fixed-top">
+        <h1 class="hidden">Urbyke</h1>
+        <div class="container">
+            <div>
+                <a href="#!/"><img src="images/logo_urbyke.png" class="img-responsive" alt="Image"></a>
+            </div>
+        </div>
+        <!--<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
+                
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -26,9 +32,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#!/"><span>Ur</span><span>by</span><span>ke</span></a>
+                    
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <form id="form-search" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
@@ -38,12 +44,10 @@
                     </form>
                 </div>
             </div>
-        </nav>
+        </nav>-->
     </header>
     <main ng-view>
     </main>
-    <footer>
-    </footer>
     <script src="js/app.js"></script>
     <script src="js/factories/BikeFactory.js"></script>
     <script src="js/controllers/LocationController.js"></script>
