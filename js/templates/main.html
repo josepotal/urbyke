@@ -1,18 +1,17 @@
 <section id="display-map">
     <ng-map id="map" default-style="false" center="current-location" zoom="14">
-    <div ng-repeat="station in vm.allStationsInfo">
-        <marker id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}"  on-click="map.showInfoWindow('bar{{station.id}}')" >
-        </marker>
-        <info-window id="bar{{station.id}}">
-            <div>
-                <strong>{{station.name}}</strong>
-                <br>
-                Bikes available: <strong>{{station.bikes}}</strong> <br>
-                Slots: <strong>{{station.slots}}</strong>
-            </div>
-        </info-window>
-    </div>
+        <div ng-repeat="station in vm.allStationsInfo">
+            <marker id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('bar{{station.id}}')">
+            </marker>
+            <info-window id="bar{{station.id}}">
+                <div>
+                    <strong>{{station.name}}</strong>
+                    <br> Bikes available: <strong>{{station.bikes}}</strong>
+                    <br> Slots: <strong>{{station.slots}}</strong>
+                </div>
+            </info-window>
+        </div>
 </section>
 <section id="info-station">
-<p>Hello World!!</p>
+    <p>Hello World!!</p>
 </section>
