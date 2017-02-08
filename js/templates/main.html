@@ -4,6 +4,6 @@
   <ng-map default-style="true" center="{{vm.latitude}},{{vm.longitude}}" zoom="16" >
     <marker position="current-location" animation="Animation.DROP"></marker>
     <marker ng-repeat="{{station in vm.stations}}"></marker>
-   	<marker position="{{vm.stations.latitude}}, {{vm.stations.longitude}}"></marker>
+   	<marker position="{{vm.stations.latitude}},{{vm.stations.longitude}}"></marker>
   </ng-map>
 </div>
