@@ -19,7 +19,8 @@
             bikes: elem.free_bikes,
             slots: elem.empty_slots,
             latitude: elem.latitude,
-            longitude: elem.longitude
+            longitude: elem.longitude,
+            centerMapString: elem.latitude + ',' + elem.longitude
           }
           return stationsInfo
         })

@@ -9,8 +9,8 @@ angular.module('urbykeApp')
     })
 
     .when('/details/:idStation', {
-      templateUrl: 'js/templates/details.html',
-      controller: 'DetailsController',
+      templateUrl: 'js/templates/details-station.html',
+      controller: 'DetailsStationController',
       controllerAs: 'vm'
     })
 
