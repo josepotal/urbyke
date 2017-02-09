@@ -75,7 +75,6 @@ main
       z-index: 300
       #more-info
         display: block
-        position: fixed
         width: 100%
         background: #0084FF
         height: 51px
@@ -99,11 +98,13 @@ main
         top: calc(100% - 51px)
       &.top-reset
         top: 0
-        height: calc(100% - 51px)
+        min-height: calc(100% - 51px)
+        #more-info 
+          position: fixed
     nav
       margin-top: 51px
       #stations-details
-        height: 100%
+        min-height: 100%
     nav.hidden-info
       display: none
     nav.show-info
