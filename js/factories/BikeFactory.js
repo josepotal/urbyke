@@ -19,7 +19,10 @@
             bikes: elem.free_bikes,
             slots: elem.empty_slots,
             latitude: elem.latitude,
-            longitude: elem.longitude
+            longitude: elem.longitude,
+            nearByStation: elem.extra.NearbyStationList.map(function (elem) {
+              return elem
+            })
           }
           return stationsInfo
         })

@@ -2,5 +2,13 @@
     <button ng-click="moreStations()">More Stations</button>
 </div>
 <nav class="container-fluid hidden-info {{showInfo}}">
-    <h1>guapo</h1>
+    <div class="container-fluid" ng-repeat="detail in vm.details">
+        <h3>{{detail.name}}</h3>
+        <ul>
+            <li>Location: {{detail.name}}</li>
+            <li>Available Bikes: {{detail.bikes}}</li>
+            <li>Available Slots: {{detail.slots}}</li>
+            <li>Near By Station: {{detail.nearByStation}}</li>
+        </ul>
+    </div>
 </nav>
