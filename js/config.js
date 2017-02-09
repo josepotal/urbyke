@@ -12,7 +12,7 @@ angular.module('urbykeApp')
       templateUrl: 'js/templates/details.html',
       controller: 'DetailsController',
       controllerAs: 'vm'
-     })
+    })
 
     .otherwise('/')
 })

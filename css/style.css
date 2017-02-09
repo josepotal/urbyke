@@ -76,7 +76,8 @@ main {
         border-top: 2px solid rgba(64, 63, 63, 0.4);
         padding: 5px 20px;
         color: white;
-        text-align: center; }
+        text-align: center;
+        z-index: 300; }
         main #details-list #more-info button {
           width: 90%;
           background: #FbFbFb;
@@ -88,12 +89,15 @@ main {
           main #details-list #more-info button:hover {
             background: #0084FF;
             color: white; }
-    main .bottom-50 {
-      top: calc(100% - 51px); }
-    main .top-reset {
-      top: 0; }
+      main #details-list.bottom-50 {
+        top: calc(100% - 51px); }
+      main #details-list.top-reset {
+        top: 0;
+        height: calc(100% - 51px); }
     main nav {
       margin-top: 51px; }
+      main nav #stations-details {
+        height: 100%; }
     main nav.hidden-info {
       display: none; }
     main nav.show-info {

@@ -10,11 +10,6 @@
   // })
   // vm.map.setCenter(bcn)
 
-  $rootScope.$on('mapInitialized', function (evt, map) {
-    $rootScope.mymap = map
-    $rootScope.$apply()
-  })
-
   BikeFactory.getBikeStations()
     .then(function (response) {
       vm.allStationsInfo = response
