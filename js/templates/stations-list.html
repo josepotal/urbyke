@@ -5,22 +5,28 @@
     <section id="filter-station">
         <div class="form-group">
             <label for="">Search a Stations</label>
-            <input type="text" class="form-control" autofocus placeholder="Station..." ng-model="search">
+            <input type="text" class="form-control" autofocus placeholder="Station..." ng-model="query">
         </div>
     </section>
     <div>
         <div>
             <p>{{vm.allStationsInfo.length}} stations found</p>
         </div>
-        <ul class="list-unstyled">
-            <li ng-repeat="station in vm.allStationsInfo | filter : { name : search}">
-                <h3><a href="#!/details/{{station.id}}">{{station.name}}</a></h3>
-                <div>
-                    <p>Bikes Available: {{station.bikes}}</p>
-                    <p>Empty Slots: {{station.slots}}</p>
-                    <button class="glyphicon glyphicon-map-marker" ng-click="vm.centerStation(station.id)"></button>
-                </div>
-            </li>
-        </ul>
+        <div>
+            <ul class="list-unstyled list-group" id="listed-stations">
+                <li class="panel panel-default" id="single-station" ng-repeat="station in vm.allStationsInfo  | filter : { name : query}">
+                    <div class="panel-heading">
+                        <h5>
+                            <a href="#!/details/{{station.id}}">{{station.name}}</a>
+                            <a href="" class="pull-right glyphicon glyphicon-map-marker" ng-click="vm.centerStation(station.id)"></a>
+                        </h5>
+                    </div>
+                    <div id="bikes-availability" class="panel-body">
+                        <div class="col-xs-6 text-center"><strong ng-class="{{station.bikes}} ? 'btn btn-success' : 'btn btn-danger'"> {{station.bikes}}</strong> Bikes Available </div>
+                        <div class="col-xs-6 text-center"><strong ng-class="{{station.slots}} ? 'btn btn-success' : 'btn btn-danger'"> {{station.slots}}</strong> Empty Slots</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
