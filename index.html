@@ -21,7 +21,9 @@
             </div>
         </div>
     </header>
-    <main ng-view>
+    <main>
+        <section id="details-list" class="bottom-50 {{showDetails}}" ng-view ></section>
+        <section id="display-map" ng-include src="'js/templates/map.html'" ng-controller="LocationController as vm"></section>
     </main>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -30,6 +32,7 @@
     <script src="js/app.js"></script>
     <script src="js/factories/BikeFactory.js"></script>
     <script src="js/controllers/LocationController.js"></script>
+    <script src="js/controllers/StationsListController.js"></script>
     <script src="js/controllers/DetailsController.js"></script>
     <script src="js/controllers/ButtonShowStationController.js"></script>
     <script src="js/config.js"></script>
