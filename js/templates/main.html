@@ -30,7 +30,7 @@
     <ng-map id="map" default-style="false" center="{{vm.centerMap}}" zoom="16">
         <div ng-repeat="station in vm.allStationsInfo | filter : { name : search}">
             <marker position="current-position"></marker>
-            <marker icon="images/icon-station.png" id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('bar{{station.id}}')">
+            <marker icon="images/icon-station.png" id="marker{{station.id}}" animation="DROP" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('bar{{station.id}}')">
             </marker>
             <info-window id="bar{{station.id}}">
                 <div class="">
