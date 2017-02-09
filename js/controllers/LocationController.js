@@ -13,7 +13,6 @@
     BikeFactory.getStationDetails(idStation)
       .then(function (response) {
         vm.centerMap = response[0].latitude + ',' + response[0].longitude
-        console.log(vm.centerMap)
       })
   }
 })
