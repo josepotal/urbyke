@@ -1,0 +1,14 @@
+<ng-map id="map" default-style="false" center="{{vm.centerMap}}" zoom="17">
+    <div ng-repeat="station in vm.allStationsInfo">
+        <marker position="current-position"></marker>
+        <marker icon="images/icon-station.png" id="station{{$index}}" animation="DROP" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('info{{$index}}')">
+        </marker>
+        <info-window id="info{{$index}}">
+            <div>
+                <strong>{{station.name}}</strong>
+                <br> Bikes available: <strong>{{station.bikes}}</strong>
+                <br> Slots: <strong>{{station.slots}}</strong>
+            </div>
+        </info-window>
+    </div>
+</ng-map>

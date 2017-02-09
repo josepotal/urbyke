@@ -119,7 +119,6 @@ main #details-list nav {
   /* line 77, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
   main #details-list #more-info {
     display: block;
-    position: fixed;
     width: 100%;
     background: #0084FF;
     height: 51px;
@@ -127,6 +126,7 @@ main #details-list nav {
     padding: 5px 20px;
     color: white;
     text-align: center;
+    z-index: 300;
   }
   /* line 87, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
   main #details-list #more-info button {
@@ -144,33 +144,42 @@ main #details-list nav {
     color: white;
   }
   /* line 98, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
-  main .bottom-50 {
+  main #details-list.bottom-50 {
     top: calc(100% - 51px);
   }
   /* line 100, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
-  main .top-reset {
+  main #details-list.top-reset {
     top: 0;
+    min-height: calc(100% - 51px);
   }
-  /* line 102, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+  /* line 103, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+  main #details-list.top-reset #more-info {
+    position: fixed;
+  }
+  /* line 105, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
   main nav {
     margin-top: 51px;
   }
-  /* line 104, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+  /* line 107, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+  main nav #stations-details {
+    min-height: 100%;
+  }
+  /* line 109, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
   main nav.hidden-info {
     display: none;
   }
-  /* line 106, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+  /* line 111, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
   main nav.show-info {
     display: block;
   }
 }
 
-/* line 110, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+/* line 115, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
 .glyphicon.glyphicon-map-marker {
   font-size: 26px;
 }
 
-/* line 115, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+/* line 120, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
 #bikes-availability div {
   display: flex;
   flex-direction: column;

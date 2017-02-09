@@ -76,7 +76,6 @@ main
       z-index: 300
       #more-info
         display: block
-        position: fixed
         width: 100%
         background: #0084FF
         height: 51px
@@ -84,6 +83,7 @@ main
         padding: 5px 20px
         color: white
         text-align: center
+        z-index: 300
         button
           width: 90%
           background: $background_main
@@ -95,12 +95,17 @@ main
           &:hover
             background: #0084FF
             color: white
-    .bottom-50
-      top: calc(100% - 51px)
-    .top-reset
-      top: 0
+      &.bottom-50
+        top: calc(100% - 51px)
+      &.top-reset
+        top: 0
+        min-height: calc(100% - 51px)
+        #more-info 
+          position: fixed
     nav
       margin-top: 51px
+      #stations-details
+        min-height: 100%
     nav.hidden-info
       display: none
     nav.show-info
@@ -118,5 +123,3 @@ main
     flex-wrap: wrap
     justify-content: center
      
-
-

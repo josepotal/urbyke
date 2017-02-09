@@ -1,0 +1,26 @@
+<div id="more-info" ng-controller="ButtonShowStationController">
+    <button ng-click="moreStations()">More Stations</button>
+</div>
+<nav class="container-fluid hidden-info {{showInfo}}">
+    <section id="filter-station">
+        <div class="form-group">
+            <label for="">Search a Stations</label>
+            <input type="text" class="form-control" autofocus placeholder="Station..." ng-model="search">
+        </div>
+    </section>
+    <div>
+        <div>
+            <p>{{vm.allStationsInfo.length}} stations found</p>
+        </div>
+        <ul class="list-unstyled">
+            <li ng-repeat="station in vm.allStationsInfo | filter : { name : search}">
+                <h3><a href="#!/details/{{station.id}}">{{station.name}}</a></h3>
+                <div>
+                    <p>Bikes Available: {{station.bikes}}</p>
+                    <p>Empty Slots: {{station.slots}}</p>
+                    <button class="glyphicon glyphicon-map-marker" ng-click="vm.centerStation(station.id)"></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

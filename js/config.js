@@ -3,16 +3,16 @@ angular.module('urbykeApp')
 .config(function ($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'js/templates/main.html',
-      controller: 'LocationController',
+      templateUrl: 'js/templates/stations-list.html',
+      controller: 'StationsListController',
       controllerAs: 'vm'
     })
 
     .when('/details/:idStation', {
-      templateUrl: 'js/templates/details.html',
-      controller: 'DetailsController',
+      templateUrl: 'js/templates/details-station.html',
+      controller: 'DetailsStationController',
       controllerAs: 'vm'
-     })
+    })
 
     .otherwise('/')
 })
