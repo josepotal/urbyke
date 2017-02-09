@@ -1,2 +1,24 @@
-<h1>{{vm.stationDetails.name}}</h1>
-<h1>guapo</h1>
+<section id="details-list" class="bottom-50 {{vm.showDetails}}">
+    <div id="more-info">
+        <button ng-click="vm.moreStations()">More Stations</button>
+    </div>
+    <nav class="container-fluid hidden-info {{vm.showInfo}}">
+        <h1>{{vm.stationDetails.name}}</h1>
+        <h1>guapo</h1>
+    </nav>
+</section>
+<section id="display-map">
+    <ng-map id="map" default-style="false" center="current-position" zoom="16">
+        <div ng-repeat="station in vm.allStationsInfo | filter : { name : search}">
+            <marker id="marker{{station.id}}" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('bar{{station.id}}')">
+            </marker>
+            <info-window id="bar{{station.id}}">
+                <div class="">
+                    <strong>{{station.name}}</strong>
+                    <br> Bikes available: <strong>{{station.bikes}}</strong>
+                    <br> Slots: <strong>{{station.slots}}</strong>
+                </div>
+            </info-window>
+        </div>
+    </ng-map>
+</section>
