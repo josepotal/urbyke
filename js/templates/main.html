@@ -5,18 +5,28 @@
     <nav class="container-fluid hidden-info {{vm.showInfo}}">
         <div>
             <div>
+                <label for="stations-searcher">Search your station</label>
+                <input type="text" name="stations-searcher" id="">
+            </div>
+            <div >
                 <p>{{vm.allStationsInfo.length}} stations found</p>
             </div>
-            <ul class="list-unstyled">
-                <li ng-repeat="station in vm.allStationsInfo">
-                    <h3><a href="#!/details/{{$index}}">{{station.name}}</a></h3>
-                    <div>
-                        <p>Bikes Available: {{station.bikes}}</p>
-                        <p>Empty Slots: {{station.slots}}</p>
-                        <button class="glyphicon glyphicon-map-marker" ng-click=""></button>
+            <div>
+            <ul class="list-unstyled list-group" id="listed-stations">
+                <li class="panel panel-default" id="single-station"  ng-repeat="station in vm.allStationsInfo">
+                    <div class="panel-heading">
+                        <h5>
+                            <a href="#!/details/{{station.id}}">{{station.name}}</a>
+                            <a href="#!/details/{{station.id}}" class="pull-right glyphicon glyphicon-map-marker" ng-click=""></a>
+                        </h5>
+                    </div>
+                    <div id="bikes-availability" class="panel-body">
+                        <div class="col-xs-6 text-center"><strong ng-class="{{station.bikes}} ? 'btn btn-success' : 'btn btn-danger'"> {{station.bikes}}</strong> Bikes Available </div>
+                        <div class="col-xs-6 text-center"><strong ng-class="{{station.slots}} ? 'btn btn-success' : 'btn btn-danger'"> {{station.slots}}</strong> Empty Slots</div>
                     </div>
                 </li>
             </ul>
+            </div>
         </div>
     </nav>
 </section>
