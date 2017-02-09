@@ -1,8 +1,8 @@
-<section id="details-list" class="bottom-50 {{vm.showDetails}}">
-    <div id="more-info">
-        <button ng-click="vm.moreStations()">More Stations</button>
+<section id="details-list" class="bottom-50 {{showDetails}}">
+    <div id="more-info" ng-controller="ButtonShowStationController">
+        <button ng-click="moreStations()">More Stations</button>
     </div>
-    <nav class="container-fluid hidden-info {{vm.showInfo}}">
+    <nav class="container-fluid hidden-info {{showInfo}}">
         <section id="filter-station">
             <div class="form-group">
                 <label for="">Search a Stations</label>

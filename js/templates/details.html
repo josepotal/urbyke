@@ -1,9 +1,9 @@
-<section id="details-list" class="bottom-50 {{vm.showDetails}}">
-    <div id="more-info">
-        <button ng-click="vm.moreStations()">More Stations</button>
+<section id="details-list" class="bottom-50 {{showDetails}}">
+    <div id="more-info" ng-controller="ButtonShowStationController">
+        <button ng-click="moreStations()">More Stations</button>
     </div>
-    <nav class="container-fluid hidden-info {{vm.showInfo}}">
-        <h1>{{vm.stationDetails.name}}</h1>
+    <nav class="container-fluid hidden-info {{showInfo}}">
+        
         <h1>guapo</h1>
     </nav>
 </section>
