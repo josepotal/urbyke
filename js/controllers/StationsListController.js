@@ -10,9 +10,6 @@
       .then(function (response) {
         vm.allStationsInfo = response
       })
-    /* vm.$on('centerSelectStation', function (event, artists, searchTerm) {
-      vm.history.push(searchTerm)
-    }) */
 
     vm.centerStation = function (idStation) {
       BikeFactory.getStationDetails(idStation)
