@@ -1,6 +1,10 @@
 [![AngularJS](https://github.com/FransLopez/logo-images/blob/master/logos/angularjs.png)](https://angularjs.org/) [![HTML5 and CSS3](https://github.com/FransLopez/logo-images/blob/master/logos/html5andcss3.png)](http://www.w3.org/) [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
+<<<<<<< HEAD
 [![Skylab Coders Academy](/Users/ernestoparra/Desktop/img/Logo\ Skylab.png)]
+=======
+[![Skylab Coders Academy](https://github.com/FransLopez/logo-images/blob/master/logos/Skylab.png)](http://www.skylabcoders.com/es)
+>>>>>>> e703c067ef36e656706ddd297a51624b6012c9f5
 
 #### Urbyke APP
 
@@ -58,6 +62,7 @@ to run the local server:
 `http-server`
 
 ### Documentation
+<<<<<<< HEAD
 
 The various directives are documented at API's of bike Services all around the city of Barcelona.
 
@@ -74,3 +79,15 @@ The various directives are documented at API's of bike Services all around the c
 
 
 
+=======
+
+The various directives are documented at API's of bike Services all around the city of Barcelona.
+
+### API Reference
+
+-  http://barcelonaapi.marcpous.com
+-  https://www.tmb.cat/es/sobre-tmb/herramientas-para-desarrolladores
+-  Bicing: 
+    -   http://wservice.viabicing.cat/v2/stations
+    -   http://opendata.bcn.cat/opendata/en/catalog/TRANSPORT
+>>>>>>> e703c067ef36e656706ddd297a51624b6012c9f5

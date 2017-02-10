@@ -5,7 +5,7 @@
 
   function BikeFactory ($http) {
     function getBikeStations () {
-      var url = 'http://api.citybik.es/v2/networks/bicing'
+      var url = 'https://api.citybik.es/v2/networks/bicing'
 
       function getResults (response) {
         return response.data.network.stations
