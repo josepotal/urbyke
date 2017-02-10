@@ -13,7 +13,7 @@
 
     vm.centerMap = 'current-position'
 
-    $scope.$on('centerSelectStation', function (event, centerMap, searchTerm) {
+    $scope.$on('centerSelectStation', function (event, centerMap) {
       vm.centerMap = centerMap
     })
   }
