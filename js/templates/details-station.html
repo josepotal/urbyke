@@ -1,23 +1,24 @@
 <div id="more-info" ng-controller="ButtonShowStationController">
     <button ng-click="moreStations()">{{(toggleText === 'More Stations') ? 'Info Station' : toggleText}}</button>
-
 </div>
 <nav class="container-fluid hidden-info {{showInfo}}">
     <div class="container-fluid" ng-repeat="detail in vm.details">
-            
+        <a class="btn btn-large btn-block btn-info" href="#!/" role="button"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span> Return All Stations</a>
         <h3 class="well text-center">{{detail.name}}</h3>
         <ul class="list-unstyled list-group details-style">
-
             <li class="list-group-item">
-            <p>Location: <span class="btn btn-primary pull-right">{{detail.name}}</span></p>
+                <p>Location: <span class="btn btn-primary pull-right">{{detail.name}}</span></p>
             </li>
             <li class="list-group-item">
-            <p>Available Bikes: <span class=" pull-right" ng-class=" {{detail.bikes}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.bikes}}</span></p></li>
+                <p>Available Bikes: <span class=" pull-right" ng-class=" {{detail.bikes}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.bikes}}</span></p>
+            </li>
             <li class="list-group-item">
-            <p>Slots: <span class=" pull-right" ng-class=" {{detail.slots}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.slots}}</span></p></li>
+                <p>Slots: <span class=" pull-right" ng-class=" {{detail.slots}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.slots}}</span></p>
+            </li>
             <li class="list-group-item">Nearby Stations:
                 <ul class="nearby-stations-style">
-                    <li class="btn btn-default" ng-click="goToStation($event)" ng-repeat="station in detail.nearByStation">{{station}}</li>
+
+                    <li ng-repeat="station in detail.nearByStation"><a class="btn btn-default" href="#!/details/{{station}}">{{station}}</a></li>
                 </ul>
             </li>
         </ul>
