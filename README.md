@@ -60,9 +60,9 @@ The various directives are documented at API's of bike Services all around the c
 
 #### Authors:
 
-[Francisco Lopez](https://github.com/FransLopez)
-[Josep Otal](https://github.com/josepotal)
-[Ernesto Parra](https://github.com/ERPG)
+- [Francisco Lopez](https://github.com/FransLopez)
+- [Josep Otal](https://github.com/josepotal)
+- [Ernesto Parra](https://github.com/ERPG)
 
 ### API Reference
 
