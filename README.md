@@ -37,7 +37,7 @@ To install dependencies you can just do:
 
 ##### Google Maps API
 To run the map from google you need to request an API key in the next link: [Google Maps API](https://developers.google.com/maps/documentation/javascript/), then you need to add it into the your index.html file in a script tag.
-(Reference line 29 from index.html you add **?key=<%GOOGLE-API%>**, where you need to replace **_<%GOOGLE-API%>_** with your password )
+(Reference line 29 from index.html you add **?key=<%GOOGLE-API%>**, where you need to replace **_<%GOOGLE-API%>_** with your Api-key )
 
 
 ### Running the example
