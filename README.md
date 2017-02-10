@@ -1,6 +1,10 @@
 [![AngularJS](https://github.com/FransLopez/logo-images/blob/master/logos/angularjs.png)](https://angularjs.org/) [![HTML5 and CSS3](https://github.com/FransLopez/logo-images/blob/master/logos/html5andcss3.png)](http://www.w3.org/) [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
+---
+
 [![Skylab Coders Academy](https://github.com/FransLopez/logo-images/blob/master/logos/Skylab.png)](http://www.skylabcoders.com/es)
+
+---
 
 #### Urbyke APP
 
@@ -10,36 +14,26 @@ This is a prototype application for a test project at *Skylab Coders Academy* to
 
 ### Getting Started
 
-This is a set of directives and services for AngularJS `1.5.8`
+This is a set of directives and services for AngularJS `1.6.1`
 
 ### Dependencies
 
 The following dependencies where use to make the Web application
 
-. `bootstrap`
+. `AngularJS 1.6.1`
 
-. `JQuery`
+. `AngularJS route 1.6.1`
 
-. `Angular-google-maps`
+. `Bootstrap`
+
+. `ngMap | AngularJS directives for google maps`
 
 
 ### Development and or Running the Build
 
 To install dependencies you can just do:
 
-`npm install && bower install`
-
-to install angular
-
-`bower install angular --save`
-
-to install bootstrap
-
-`bower install bootstrap --save`
-
-to install Angular google`s map
-
-`npm install --save angular-google-maps`
+`bower install`
 
 
 ### Running the example
@@ -63,8 +57,11 @@ The various directives are documented at API's of bike Services all around the c
 
 ### API Reference
 
--  http://barcelonaapi.marcpous.com
--  https://www.tmb.cat/es/sobre-tmb/herramientas-para-desarrolladores
--  Bicing: 
-    -   http://wservice.viabicing.cat/v2/stations
-    -   http://opendata.bcn.cat/opendata/en/catalog/TRANSPORT
+- [ngMap - GoogleMap AngularJS Directive](https://github.com/allenhwkim/angularjs-google-maps) 
+- [ngMap documentation](https://ngmap.github.io/)
+- [ngMap directives](https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/docs/index.html)
+- [Google Maps API](https://developers.google.com/maps/documentation/javascript/)
+- [BarcelonaAPI](http://barcelonaapi.marcpous.com)
+- [Tmb.cat](https://www.tmb.cat/es/sobre-tmb/herramientas-para-desarrolladores)
+-  **Bicing:**
+    -  [API - CityBik](https://api.citybik.es/v2/)
