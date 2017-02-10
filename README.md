@@ -5,8 +5,6 @@
 [![Skylab Coders Academy](https://github.com/FransLopez/logo-images/blob/master/logos/Skylab.png)](http://www.skylabcoders.com/es)
 
 
----
-
 #### Urbyke APP
 
 This is a prototype application for a test project at *Skylab Coders Academy* to apply the concept learn about *AngularJs*. The Web aplication is call **Urbyke App** and it's use to locate the public bike service all around the city of Barcelona, Spain. The repo contains all the templates and controllers that will help you through the review of the code; also shows the use of routes and factories that were use to make AJAX requests to collect all the data information.
@@ -21,13 +19,13 @@ This is a set of directives and services for AngularJS `1.6.1`
 
 The following dependencies where use to make the Web application
 
-. `AngularJS 1.6.1`
+- `AngularJS 1.6.1`
 
-. `AngularJS route 1.6.1`
+- `AngularJS route 1.6.1`
 
-. `Bootstrap`
+- `Bootstrap`
 
-. `ngMap | AngularJS directives for google maps`
+- `ngMap | AngularJS directives for google maps`
 
 
 ### Development and or Running the Build
@@ -36,11 +34,7 @@ To install dependencies you can just do:
 
 `bower install`
 
-To run the map from google you need to request an API key in the next link:
-
-[Google Maps API](https://developers.google.com/maps/documentation/javascript/)
-
-then you need to add it into the your index.html file in a script tag.
+To run the map from google you need to request an API key in the next link: [Google Maps API](https://developers.google.com/maps/documentation/javascript/) then you need to add it into the your index.html file in a script tag.
 (Reference line 30 from index.html, section GOOGLE.API)
 
 
