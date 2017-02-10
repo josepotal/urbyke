@@ -14,6 +14,6 @@ function DetailsStationController ($rootScope, $routeParams, BikeFactory) {
   BikeFactory.getStationDetails(idStation)
       .then(function (response) {
         var centerMap = response[0].latitude + ',' + response[0].longitude
-        $rootScope.$broadcast('centerSelectStation', centerMap, idStation)
+        $rootScope.$broadcast('centerSelectStation', centerMap)
       })
 }
