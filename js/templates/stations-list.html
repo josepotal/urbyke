@@ -14,7 +14,7 @@
         </div>
         <div>
             <ul class="list-unstyled list-group" id="listed-stations">
-                <li class="panel panel-default" id="single-station" ng-repeat="station in vm.allStationsInfo | filter : { name : query} | limitTo: vm.paginationLimit()">
+                <li class="panel panel-default" id="single-station" ng-repeat="station in vm.allStationsInfo | filter : {name : query} | limitTo: vm.paginationLimit()">
                     <div class="panel-heading">
                         <h5>
                             <a href="#!/details/{{station.id}}">{{station.name}}</a>
@@ -27,9 +27,7 @@
                     </div>
                 </li>
             </ul>
-            <button ng-show="vm.hasMoreItemsToShow()" ng-click="vm.showMoreItems()">
-                Show More Stations
-            </button>
+            <button class="btn btn-large btn-block btn-primary" ng-show="vm.hasMoreItemsToShow()" ng-click="vm.showMoreItems()">Show More Stations</button>
         </div>
     </div>
 </nav>
