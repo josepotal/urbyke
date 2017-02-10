@@ -1,5 +1,6 @@
 <div id="more-info" ng-controller="ButtonShowStationController">
-    <button ng-click="moreStations()">{{toggleText}}</button>
+    <button ng-click="moreStations()">{{(toggleText === 'More Stations') ? 'Info Station' : toggleText}}</button>
+
 </div>
 <nav class="container-fluid hidden-info {{showInfo}}">
     <div class="container-fluid" ng-repeat="detail in vm.details">
