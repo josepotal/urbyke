@@ -4,7 +4,6 @@
 
 [![Skylab Coders Academy](https://github.com/FransLopez/logo-images/blob/master/logos/skylab-gray.png)](http://www.skylabcoders.com/es)
 
----
 
 #### Urbyke APP
 
@@ -20,13 +19,13 @@ This is a set of directives and services for AngularJS `1.6.1`
 
 The following dependencies where use to make the Web application
 
-. `AngularJS 1.6.1`
+- `AngularJS 1.6.1`
 
-. `AngularJS route 1.6.1`
+- `AngularJS route 1.6.1`
 
-. `Bootstrap`
+- `Bootstrap`
 
-. `ngMap | AngularJS directives for google maps`
+- `ngMap | AngularJS directives for google maps`
 
 
 ### Development and or Running the Build
@@ -34,6 +33,9 @@ The following dependencies where use to make the Web application
 To install dependencies you can just do:
 
 `bower install`
+
+To run the map from google you need to request an API key in the next link: [Google Maps API](https://developers.google.com/maps/documentation/javascript/) then you need to add it into the your index.html file in a script tag.
+(Reference line 30 from index.html, section GOOGLE.API)
 
 
 ### Running the example
@@ -65,3 +67,4 @@ The various directives are documented at API's of bike Services all around the c
 - [Tmb.cat](https://www.tmb.cat/es/sobre-tmb/herramientas-para-desarrolladores)
 -  **Bicing:**
     -  [API - CityBik](https://api.citybik.es/v2/)
+
