@@ -2,7 +2,7 @@
 
 ---
 
-[![Skylab Coders Academy](https://github.com/FransLopez/logo-images/blob/master/logos/Skylab.png)](http://www.skylabcoders.com/es)
+[![Skylab Coders Academy](https://github.com/FransLopez/logo-images/blob/master/logos/skylab-gray.png)](http://www.skylabcoders.com/es)
 
 ---
 
