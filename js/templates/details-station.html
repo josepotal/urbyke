@@ -1,14 +1,25 @@
 <div id="more-info" ng-controller="ButtonShowStationController">
     <button ng-click="moreStations()">{{(toggleText === 'More Stations') ? 'Info Station' : toggleText}}</button>
+
 </div>
 <nav class="container-fluid hidden-info {{showInfo}}">
     <div class="container-fluid" ng-repeat="detail in vm.details">
-        <h3>{{detail.name}}</h3>
-        <ul>
-            <li>Location: {{detail.name}}</li>
-            <li>Available Bikes: {{detail.bikes}}</li>
-            <li>Available Slots: {{detail.slots}}</li>
-            <li>Near By Station: {{detail.nearByStation}}</li>
+            
+        <h3 class="well text-center">{{detail.name}}</h3>
+        <ul class="list-unstyled list-group details-style">
+
+            <li class="list-group-item">
+            <p>Location: <span class="btn btn-primary pull-right">{{detail.name}}</span></p>
+            </li>
+            <li class="list-group-item">
+            <p>Available Bikes: <span class=" pull-right" ng-class=" {{detail.bikes}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.bikes}}</span></p></li>
+            <li class="list-group-item">
+            <p>Slots: <span class=" pull-right" ng-class=" {{detail.slots}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.slots}}</span></p></li>
+            <li class="list-group-item">Nearby Stations:
+                <ul class="nearby-stations-style">
+                    <li class="btn btn-default" ng-repeat="station in detail.nearByStation">{{station}}</li>
+                </ul>
+            </li>
         </ul>
     </div>
 </nav>

@@ -1,6 +1,7 @@
 /* eslint no-undef: "off" */
 (function () {
   angular.module('urbykeApp')
+
 .controller('ButtonShowStationController', ButtonShowStationController)
 
   function ButtonShowStationController ($rootScope) {
