@@ -9,6 +9,7 @@
 
 This is a prototype application for a test project at *Skylab Coders Academy* to apply the concept learn about *AngularJs*. The Web aplication is call **Urbyke App** and it's use to locate the public bike service all around the city of Barcelona, Spain. The repo contains all the templates and controllers that will help you through the review of the code; also shows the use of routes and factories that were use to make AJAX requests to collect all the data information.
 
+
 ---
 
 ### Getting Started
@@ -56,6 +57,12 @@ to run the local server:
 ### Documentation
 
 The various directives are documented at API's of bike Services all around the city of Barcelona.
+
+#### Authors:
+
+[Francisco Lopez](https://github.com/FransLopez)
+[Josep Otal](https://github.com/josepotal)
+[Ernesto Parra](https://github.com/ERPG)
 
 ### API Reference
 
