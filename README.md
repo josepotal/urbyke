@@ -30,13 +30,14 @@ The following dependencies where use to make the Web application
 
 
 ### Development and or Running the Build
-
+##### Bower
 To install dependencies you can just do:
 
 `bower install`
 
-To run the map from google you need to request an API key in the next link: [Google Maps API](https://developers.google.com/maps/documentation/javascript/) then you need to add it into the your index.html file in a script tag.
-(Reference line 30 from index.html, section GOOGLE.API)
+##### Google Maps API
+To run the map from google you need to request an API key in the next link: [Google Maps API](https://developers.google.com/maps/documentation/javascript/), then you need to add it into the your index.html file in a script tag.
+(Reference line 29 from index.html you add **?key=<%GOOGLE-API%>**, where you need to replace **_<%GOOGLE-API%>_** with your password )
 
 
 ### Running the example
@@ -58,12 +59,14 @@ to run the local server:
 
 The various directives are documented at API's of bike Services all around the city of Barcelona.
 
+---
 #### Authors:
 
 - [Francisco Lopez](https://github.com/FransLopez)
 - [Josep Otal](https://github.com/josepotal)
 - [Ernesto Parra](https://github.com/ERPG)
 
+---
 ### API Reference
 
 - [ngMap - GoogleMap AngularJS Directive](https://github.com/allenhwkim/angularjs-google-maps) 
