@@ -20,6 +20,7 @@
             slots: elem.empty_slots,
             latitude: elem.latitude,
             longitude: elem.longitude,
+            uid: elem.extra.uid,
             nearByStation: elem.extra.NearbyStationList.map(function (elem) {
               return elem
             })

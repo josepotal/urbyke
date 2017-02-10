@@ -17,7 +17,7 @@
             <p>Slots: <span class=" pull-right" ng-class=" {{detail.slots}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.slots}}</span></p></li>
             <li class="list-group-item">Nearby Stations:
                 <ul class="nearby-stations-style">
-                    <li class="btn btn-default" ng-repeat="station in detail.nearByStation">{{station}}</li>
+                    <li class="btn btn-default" ng-click="goToStation($event)" ng-repeat="station in detail.nearByStation">{{station}}</li>
                 </ul>
             </li>
         </ul>
