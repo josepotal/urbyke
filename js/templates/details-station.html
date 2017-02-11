@@ -7,17 +7,17 @@
         <h3 class="well text-center">{{detail.name}}</h3>
         <ul class="list-unstyled list-group details-style">
             <li class="list-group-item">
-                <p>Location: <span class="btn btn-primary pull-right">{{detail.name}}</span></p>
+                <p>Location: </p>
+                <p class="well text-center">{{detail.name}}</p>
             </li>
             <li class="list-group-item">
-                <p>Available Bikes: <span class=" pull-right" ng-class=" {{detail.bikes}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.bikes}}</span></p>
+                <p>Available Bikes: <span class="btn-block" ng-class=" {{detail.bikes}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.bikes}}</span></p>
             </li>
             <li class="list-group-item">
-                <p>Slots: <span class=" pull-right" ng-class=" {{detail.slots}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.slots}}</span></p>
+                <p>Slots: <span class="btn-block" ng-class=" {{detail.slots}} ? 'btn btn-success' : 'btn btn-danger'">{{detail.slots}}</span></p>
             </li>
-            <li class="list-group-item">Nearby Stations:
-                <ul class="nearby-stations-style">
-
+            <li class="list-group-item"><p>Nearby Stations:</p>
+                <ul class="list-unstyled">
                     <li ng-repeat="station in detail.nearByStation"><a class="btn btn-default" href="#!/details/{{station}}">{{station}}</a></li>
                 </ul>
             </li>

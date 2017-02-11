@@ -193,6 +193,12 @@ main #details-list nav {
 }
 
 /* line 126, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
+.details-style .well {
+  background: #31B0D5;
+  color: white;
+}
+
+/* line 129, C:/Users/Josep/Documents/Skylabcoders/projects-bootcamp/urbyke/sass/style.sass */
 .details-style li {
   display: flex;
   flex-direction: column;
