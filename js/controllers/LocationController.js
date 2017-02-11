@@ -1,20 +1,26 @@
 /* eslint no-undef: "off" */
 (function () {
-  angular.module('urbykeApp')
-.controller('LocationController', LocationController)
+    'use strict';
 
-  function LocationController ($scope, BikeFactory, NgMap) {
-    var vm = this
+    angular
+        .module('urbykeApp')
+        .controller('LocationController', LocationController);
 
-    BikeFactory.getBikeStations()
-      .then(function (response) {
-        vm.allStationsInfo = response
-      })
+    function LocationController ($scope, BikeFactory, NgMap) {
+    
+        var vm = this;
+        vm.centerMap = 'current-position';
 
-    vm.centerMap = 'current-position'
+        BikeFactory.getBikeStations()
+            .then(function (response) {
+                vm.allStationsInfo = response;
+            });
 
-    $scope.$on('centerSelectStation', function (event, centerMap) {
-      vm.centerMap = centerMap
-    })
-  }
-})()
+        //listens from the detailsController.js
+        $scope.$on('centerSelectStation', getPosition);
+            function getPosition(event, centerMap) {
+                vm.centerMap = centerMap;
+            }
+    }
+
+})();

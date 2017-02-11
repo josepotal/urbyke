@@ -19,7 +19,7 @@
         ///////mehthods from the factory
         
         function getBikeStations () {
-            var url = 'https://api.citybik.es/v2/networks/bicing';
+            var url = 'https://api.citybik.es/v2/networks/ecobici';
 
             return $http.get(url)
                 .then(getResults)

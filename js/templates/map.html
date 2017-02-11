@@ -1,6 +1,6 @@
-<ng-map id="map" default-style="false" center="{{vm.centerMap}}" zoom="17">
+<ng-map id="map" default-style="false" center="{{vm.centerMap}}" zoom="19">
     <div ng-repeat="station in vm.allStationsInfo">
-        <marker position="current-position"></marker>
+        <marker position="19.435437, -99.178661"></marker>
         <marker icon="images/icon-station.png" id="station{{$index}}" animation="DROP" position="{{station.latitude}}, {{station.longitude}}" on-click="map.showInfoWindow('info{{$index}}')">
         </marker>
         <info-window id="info{{$index}}">
