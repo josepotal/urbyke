@@ -19,6 +19,7 @@
         var pageSize = 5
 
         vm.paginationLimit = function (data) {
+            vm.pageSize = pageSize
             return pageSize * pagesShown
         }
         function hasMoreItemsToShow () {
@@ -26,6 +27,7 @@
         }
         vm.showMoreItems = function () {
             pagesShown = pagesShown + 1
+
         }
 
         // Center Station
