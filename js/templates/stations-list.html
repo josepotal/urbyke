@@ -4,13 +4,13 @@
 <nav class="container-fluid hidden-info {{showInfo}}">
     <section id="filter-station">
         <div class="form-group">
-            <label for="">Search a Stations</label>
+            <label for="">Search a Station</label>
             <input type="text" class="form-control" autofocus placeholder="Station..." ng-model="query">
         </div>
     </section>
     <div>
         <div>
-            <p>{{vm.allStationsInfo.length}} stations found</p>
+            <p>Showing {{ (vm.allStationsInfo | filter:{name : query}).length }} out of {{vm.allStationsInfo.length}} stations found. </p>
         </div>
         <div>
             <ul class="list-unstyled list-group" id="listed-stations">
@@ -18,7 +18,7 @@
                     <div class="panel-heading">
                         <h5>
                             <a href="#!/details/{{station.uid}}">{{station.name}}</a>
-                            <a href="" class="pull-right glyphicon glyphicon-map-marker" ng-click="vm.centerStation(station.uid)"></a>
+                            <a href="" class=" glyphicon glyphicon-map-marker" ng-click="vm.centerStation(station.uid)"></a>
                         </h5>
                     </div>
                     <div id="bikes-availability" class="panel-body">
